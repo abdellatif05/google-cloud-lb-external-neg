@@ -19,3 +19,6 @@ It points to https://httpbin.org
   - example:
     - use protocol = "HTTPS" if the google_compute_global_network_endpoint configuration uses port 443
     - use protocol = "HTTP" if the google_compute_global_network_endpoint configuration uses port 80
+
+# Load Balancer Scheme
+- user -> google_compute_global_forwarding_rule -> google_compute_target_http_proxy -> google_compute_url_map -> google_compute_backend_service -> google_compute_global_network_endpoint -> internet (httpbin.org:443)
